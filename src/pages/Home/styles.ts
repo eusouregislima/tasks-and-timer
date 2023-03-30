@@ -46,7 +46,7 @@ export const CountdownContainer = styled.div`
 
 export const Separator = styled.div`
   padding: 2rem 0;
-  color: ${(props) => props.theme['green-500']};
+  color: ${(props) => props.theme['purple-500']};
 
   width: 4rem;
   overflow: hidden;
@@ -66,7 +66,7 @@ const BaseInput = styled.input`
 
   &:focus {
     box-shadow: none;
-    border-color: ${(props) => props.theme['green-500']};
+    border-color: ${(props) => props.theme['purple-500']};
   }
 
   &::placeholder {
@@ -100,7 +100,7 @@ export const StartCountdownButton = styled.button`
   font-weight: bold;
 
   cursor: pointer;
-  background: ${(props) => props.theme['green-500']};
+  background: ${(props) => props.theme['purple-500']};
   color: ${(props) => props.theme['gray-100']};
 
   &:disabled {
