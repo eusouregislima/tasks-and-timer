@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 :focus {
@@ -12,10 +13,11 @@ export const GlobalStyle = createGlobalStyle`
   box-shadow: 0 0 0 2x ${(props) => props.theme['purple-500']};
 }
 
-body {
-  background: ${(props) => props.theme['gray-300']};
+body {  
   color:${(props) => props.theme['gray-300']};
   -webkit-font-smoothing: antialiased; 
+  background-color: ${(props) => props.theme['gray-800']}
+ 
 }
 
 body, input, textarea, button {

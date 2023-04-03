@@ -12,25 +12,24 @@ export function NewCycleForm() {
 
   return (
     <FormContainer>
-      <label htmlFor="task">Vou trabalhar em</label>
+      <label htmlFor="task">Atividade:</label>
       <TaskInput
         id="task"
         list="task-suggestions"
-        placeholder="Dê um nome para o seu projeto"
+        placeholder="O que vamos fazer hoje?"
         // os dois !! é uma forma de criar um boolean, significa estar true
         disabled={!!activeCycle}
         {...register('task')}
       />
 
       <datalist id="task-suggestions">
-        <option value="Projeto IGNITE" />
-        <option value="Projeto TO DO" />
-        <option value="Leitura" />
-        <option value="Soneca" />
-        <option value="" />
+        <option value="Estudar Inglês" />
+        <option value="Estudar Javascript" />
+        <option value="Projeto Portfólio" />
+        <option value="Intervalo" />
       </datalist>
 
-      <label htmlFor="minutesAmount">durante</label>
+      <label htmlFor="minutesAmount">Tempo</label>
       <MinutesAmountInput
         type="number"
         id="minutesAmount"

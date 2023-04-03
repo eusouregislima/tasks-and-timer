@@ -2,21 +2,32 @@ import styled from 'styled-components'
 
 export const HistoryContainer = styled.main`
   flex: 1;
-  padding: 3.5rem;
+  padding: 1.5rem;
 
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 
   h1 {
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
+  }
+  span {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
   }
 `
 
 export const HistoryList = styled.div`
   flex: 1;
   overflow: auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   table {
     width: 100%;

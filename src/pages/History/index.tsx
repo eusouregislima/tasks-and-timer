@@ -1,17 +1,25 @@
 import { useContext } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
+import { Trash } from 'phosphor-react'
 import { HistoryContainer, HistoryList, Status } from './styles'
 import { CyclesContext } from '../../context/CyclesContext'
 
 export function History() {
-  const { cycles } = useContext(CyclesContext)
+  const { cycles, deleteThisCycle, deleteAllHistory } =
+    useContext(CyclesContext)
 
   // Na tag <pre/> eu consigo colocar em tela o JSON que eu quiser
 
   return (
     <HistoryContainer>
-      <h1>Meu histórico</h1>
+      <div>
+        <h1>Meu histórico</h1>
+        <span onClick={deleteAllHistory}>
+          <Trash color="gray" size="20px" cursor="pointer" />
+          <p>Apagar todo o histórico</p>
+        </span>
+      </div>
 
       {/* <pre>{JSON.stringify(cycles, null, 2)}</pre> */}
 
@@ -23,10 +31,11 @@ export function History() {
               <th>Duração</th>
               <th>Início</th>
               <th>Status</th>
+              <th>Deletar</th>
             </tr>
           </thead>
           <tbody>
-            {cycles.map((cycle) => {
+            {cycles.map((cycle, index) => {
               return (
                 <tr key={cycle.id}>
                   <td>{cycle.task}</td>
@@ -47,6 +56,24 @@ export function History() {
                     {!cycle.finishedDate && !cycle.interruptedDate && (
                       <Status statusColor="yellow">Em andamento</Status>
                     )}
+                  </td>
+                  <td>
+                    {(cycle.interruptedDate && (
+                      <Trash
+                        onClick={() => deleteThisCycle(index)}
+                        color="red"
+                        size="20px"
+                        cursor="pointer"
+                      />
+                    )) ||
+                      (cycle.finishedDate && (
+                        <Trash
+                          onClick={() => deleteThisCycle(index)}
+                          color="red"
+                          size="20px"
+                          cursor="pointer"
+                        />
+                      ))}
                   </td>
                 </tr>
               )

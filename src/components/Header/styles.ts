@@ -1,10 +1,17 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
+  background: ${(props) => props.theme['gray-100']};
+
+  top: 0;
+  left: 0;
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 1rem;
+  padding: 1rem 20rem;
 
   img {
     width: 150px;

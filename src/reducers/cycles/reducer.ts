@@ -1,6 +1,7 @@
 import { produce } from 'immer'
 
 import { ActionTypes } from './actions'
+import alert from '../../sounds/alert.wav'
 
 export interface Cycle {
   id: string
@@ -68,11 +69,45 @@ export function cyclesReducer(state: CyclesState, action: any) {
         return state
       }
 
+      const audio = new Audio(alert)
+
+      audio.play()
+
       return produce(state, (draft) => {
         draft.activeCycleId = null
         draft.cycles[currentCycleIndex].finishedDate = new Date()
       })
     }
+
+    case ActionTypes.DELETE_THIS_CYCLE: {
+      const currentCycleIndex = action.payload.index
+
+      if (currentCycleIndex < 0) {
+        return state
+      }
+
+      return produce(state, (draft) => {
+        draft.cycles.splice(currentCycleIndex, 1)
+      })
+    }
+
+    case ActionTypes.DELETE_ALL_HISTORY: {
+      const activeCycleId = state.activeCycleId
+
+      if (activeCycleId) {
+        const cycleActive = state.cycles.filter(
+          (cycle) => cycle.id === activeCycleId,
+        )
+        return produce(state, (draft) => {
+          draft.cycles = cycleActive
+        })
+      } else {
+        return produce(state, (draft) => {
+          draft.cycles = []
+        })
+      }
+    }
+
     default:
       return state
   }
