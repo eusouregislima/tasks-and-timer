@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const LayoutContainer = styled.div`
-  max-width: 74rem;
-  height: calc(100vh -10rem);
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
 
   margin: auto;
-
-  padding: 2.5rem;
 
   background: ${(props) => props.theme['gray-800']};
 
   display: flex;
   flex-direction: column;
+  padding-bottom: 7.5rem;
 `

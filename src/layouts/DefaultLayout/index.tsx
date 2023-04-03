@@ -6,11 +6,11 @@ import { Footer } from '../../components/Footer'
 export function DefaultLayout() {
   return (
     <>
-      <Header />
       <LayoutContainer>
+        <Header />
         <Outlet />
+        <Footer />
       </LayoutContainer>
-      <Footer />
     </>
   )
 }

@@ -4,14 +4,17 @@ export const HeaderContainer = styled.div`
   background: ${(props) => props.theme['gray-100']};
 
   top: 0;
-  left: 0;
+
   width: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  padding: 1rem 20rem;
+  padding: 1rem 5rem;
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 auto;
+  }
 
   img {
     width: 150px;
@@ -29,17 +32,18 @@ export const HeaderContainer = styled.div`
       justify-content: center;
       align-items: center;
 
-      color: ${(props) => props.theme['gray-100']};
+      color: ${(props) => props.theme.black};
 
       border-top: 3px solid transparent;
       border-bottom: 3px solid transparent;
 
       &:hover {
         border-bottom: 3px solid ${(props) => props.theme['purple-500']};
+        opacity: 0.8;
       }
 
       &.active {
-        color: ${(props) => props.theme['purple-500']};
+        color: ${(props) => props.theme['purple-300']};
       }
     }
   }

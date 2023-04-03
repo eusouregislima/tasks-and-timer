@@ -13,14 +13,13 @@ export function History() {
 
   return (
     <HistoryContainer>
-      <div>
+      <div className="history">
         <h1>Meu histórico</h1>
-        <span onClick={deleteAllHistory}>
-          <Trash color="gray" size="20px" cursor="pointer" />
-          <p>Apagar todo o histórico</p>
+        <span onClick={deleteAllHistory} className="span">
+          <Trash color="purple" size="20px" cursor="pointer" />
+          <p>Apagar Histórico</p>
         </span>
       </div>
-
       {/* <pre>{JSON.stringify(cycles, null, 2)}</pre> */}
 
       <HistoryList>

@@ -1,33 +1,48 @@
 import styled from 'styled-components'
 
 export const HistoryContainer = styled.main`
-  flex: 1;
-  padding: 1.5rem;
-
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 1rem;
+
+  flex: 1; // esse componente pode aumentar ou diminuir para caber no espaço reservado a ele
+  padding: 1.5rem auto;
+
+  .history {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+  }
 
   h1 {
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
+    margin: 0;
   }
-  span {
+  .span {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
     cursor: pointer;
+
+    &:hover {
+      color: ${(props) => props.theme['purple-500']};
+    }
   }
 
   div {
     display: flex;
     justify-content: space-between;
+    max-width: 70rem;
   }
 `
 
 export const HistoryList = styled.div`
-  flex: 1;
   overflow: auto;
   margin-top: 3rem;
+  width: 75rem;
+  margin-bottom: 2rem;
 
   table {
     width: 100%;
@@ -44,6 +59,7 @@ export const HistoryList = styled.div`
 
       &:first-child {
         border-top-left-radius: 8px;
+
         padding-left: 1.5rem;
       }
 
@@ -63,10 +79,13 @@ export const HistoryList = styled.div`
       &:first-child {
         width: 50%;
         padding-left: 1.5rem;
+        border-bottom-left-radius: 8px;
       }
 
       &:last-child {
         padding-right: 1.5rem;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
       }
     }
   }
