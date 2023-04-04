@@ -134,10 +134,13 @@ export const ContainerTask = styled.div`
     }
   }
 
-  .input {
+  .inputButton {
     width: 4rem;
     padding: 1.5rem;
     margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
 
     button {
       width: 2rem;

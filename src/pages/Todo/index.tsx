@@ -40,7 +40,7 @@ export function ToDo() {
         </span>
       </ContainerInfo>
       <ContainerTask>
-        <div className="input">
+        <div className="inputButton">
           <button id="ok">
             <Checks size={20} />
           </button>
@@ -58,7 +58,7 @@ export function ToDo() {
         </div>
       </ContainerTask>
       <ContainerTask>
-        <div className="input">
+        <div className="inputButton">
           <button id="ok">
             <Checks size={20} />
           </button>
@@ -76,7 +76,7 @@ export function ToDo() {
         </div>
       </ContainerTask>
       <ContainerTask>
-        <div className="input">
+        <div className="inputButton">
           <button id="ok">
             <Checks size={20} />
           </button>
@@ -94,7 +94,7 @@ export function ToDo() {
         </div>
       </ContainerTask>
       <ContainerTask>
-        <div className="input">
+        <div className="inputButton">
           <button id="ok">
             <Checks size={20} />
           </button>
@@ -112,7 +112,7 @@ export function ToDo() {
         </div>
       </ContainerTask>
       <ContainerTask>
-        <div className="input">
+        <div className="inputButton">
           <button id="ok">
             <Checks size={20} />
           </button>
