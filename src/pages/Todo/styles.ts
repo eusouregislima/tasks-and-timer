@@ -5,8 +5,30 @@ export const ToDoContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
-`
 
+  .deleteAll {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 0.3rem;
+
+    p {
+      margin: 0;
+      font-size: 0.8rem;
+    }
+
+    button {
+      background: none;
+      border: none;
+      &:hover {
+        color: red;
+      }
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+`
 export const ContainerForm = styled.div`
   padding: 3rem;
   display: flex;
@@ -66,49 +88,6 @@ export const Button = styled.button`
     opacity: 0.6;
   }
 `
-
-export const ContainerInfo = styled.div`
-  width: 53rem;
-  display: flex;
-  justify-content: space-between;
-
-  span {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    .info {
-      display: flex;
-      gap: 0.4rem;
-
-      p {
-        margin: 0;
-      }
-    }
-  }
-
-  div {
-    background: #333333;
-    border-radius: 9999px;
-
-    height: 19px;
-    padding: 1rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-`
-
-export const Text = styled.p`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  color: ${(props) => props.theme['purple-500']};
-  margin: 0;
-`
-
 export const ContainerTask = styled.div`
   width: 736px;
   height: 72px;
@@ -123,51 +102,34 @@ export const ContainerTask = styled.div`
   display: flex;
   align-items: center;
 
-  button {
-    background: none;
-    border: none;
-    &:hover {
-      color: red;
-    }
-    &:active {
-      opacity: 0.7;
-    }
-  }
-
   .inputButton {
-    width: 4rem;
+    width: 9rem;
     padding: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 0.7rem;
     display: flex;
     justify-content: center;
     padding-bottom: 3rem;
-
-    button {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 9999px;
-      border: none;
-      padding: 1rem;
-
-      cursor: pointer;
-      background: none;
-      border: none;
-
-      &:hover {
-        color: green;
-      }
-      &:active {
-        opacity: 0.7;
-      }
-    }
   }
 
   .label {
-    width: 43rem;
+    max-width: 38rem;
+    word-wrap: break-word;
+    width: 38rem;
   }
 
   .svg {
     padding: 1rem;
     cursor: pointer;
+
+    button {
+      background: none;
+      border: none;
+      &:hover {
+        color: red;
+      }
+      &:active {
+        opacity: 0.7;
+      }
+    }
   }
 `

@@ -5,6 +5,7 @@ import { Router } from './Router'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
 import { CyclesContextProvider } from './context/CyclesContext'
+import { TasksContextProvider } from './context/TaskContext'
 // import { HomeContext } from './HomeContext'
 
 export function App() {
@@ -13,7 +14,9 @@ export function App() {
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
         <CyclesContextProvider>
-          <Router />
+          <TasksContextProvider>
+            <Router />
+          </TasksContextProvider>
         </CyclesContextProvider>
       </BrowserRouter>
       <GlobalStyle />
