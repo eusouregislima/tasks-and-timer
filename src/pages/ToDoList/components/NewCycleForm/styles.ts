@@ -32,10 +32,6 @@ const BaseInput = styled.input`
   padding: 0 0.5rem;
   color: ${(props) => props.theme['gray-100']};
 
-  @media screen and (max-width: 700px) {
-    font-size: 1.5rem;
-  }
-
   &:focus {
     box-shadow: none;
     border-color: ${(props) => props.theme['purple-500']};
@@ -44,17 +40,21 @@ const BaseInput = styled.input`
   &::placeholder {
     color: ${(props) => props.theme['gray-500']};
   }
+
+  @media screen and (max-width: 700px) {
+    font-size: 1.5rem;
+  }
 `
 
 export const TaskInput = styled(BaseInput)`
   flex: 1; // esse componente pode aumentar ou diminuir para caber no espaço reservado a ele
 
-  @media screen and (max-width: 700px) {
-    flex: 0.5;
-  }
-
   &::-webkit-calendar-picker-indicator {
     display: none !important;
+  }
+
+  @media screen and (max-width: 700px) {
+    flex: 0.5;
   }
 `
 

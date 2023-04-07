@@ -17,13 +17,6 @@ export const ToDoContainer = styled.div`
       font-size: 0.8rem;
     }
 
-    @media screen and (max-width: 760px) {
-      p {
-        margin-top: 0.5rem;
-        font-size: 1rem;
-      }
-    }
-
     button {
       background: none;
       border: none;
@@ -33,6 +26,13 @@ export const ToDoContainer = styled.div`
       &:active {
         opacity: 0.7;
       }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
     }
   }
 `
@@ -81,10 +81,6 @@ export const Button = styled.button`
   font-size: 1rem;
   line-height: 140%;
 
-  @media screen and (max-width: 760px) {
-    padding: 1rem;
-  }
-
   color: ${(props) => props.theme.white};
   border: none;
 
@@ -108,14 +104,14 @@ export const Button = styled.button`
     cursor: not-allowed;
     opacity: 0.6;
   }
+
+  @media screen and (max-width: 760px) {
+    padding: 1rem;
+  }
 `
 export const ContainerTask = styled.div`
   width: 736px;
   height: 72px;
-
-  @media screen and (max-width: 760px) {
-    width: 350px;
-  }
 
   background: ${(props) => props.theme['gray-700']};
   margin-top: 1rem;
@@ -217,5 +213,9 @@ export const ContainerTask = styled.div`
         opacity: 0.7;
       }
     }
+  }
+
+  @media screen and (max-width: 760px) {
+    width: 350px;
   }
 `

@@ -17,7 +17,7 @@ export const HomeContainer = styled.div`
   }
 
   @media screen and (max-width: 550px) {
-    width: 1.5rem;
+    width: 100%;
     form {
       gap: 4rem;
     }
@@ -30,10 +30,6 @@ export const BaseCountdownButton = styled.button`
   border: 0;
   padding: 1rem;
   border-radius: 8px;
-
-  @media screen and (max-width: 550px) {
-    width: 50%;
-  }
 
   display: flex;
   align-items: center;
@@ -48,6 +44,10 @@ export const BaseCountdownButton = styled.button`
   &:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 50%;
   }
 `
 
