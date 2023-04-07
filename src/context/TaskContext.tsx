@@ -1,15 +1,9 @@
 import { ReactNode, createContext, useEffect, useReducer } from 'react'
 
-import {
-  Task,
-  FavoritesTasks,
-  tasksReducer,
-  favoriteTaskReducer,
-} from '../reducers/tasks/reducer'
+import { Task, tasksReducer } from '../reducers/tasks/reducer'
 
 import {
   createNewTaskAction,
-  // createFavoritesTasksAction,
   deleteThisTaskAction,
   deleteAllTasksAction,
   setStatusTaskAction,
@@ -20,15 +14,10 @@ interface CreateTaskData {
   status: string
 }
 
-// interface CreateFavoriteList {
-//   task: string
-// }
-
 interface TasksContextType {
   tasks: Task[]
   createNewTask: (data: CreateTaskData) => void
-  // createFavoritesTasks: (data: CreateFavoriteList) => void
-  setStatusTask: (index: number, newStatus: string) => void
+  setStatusTask: (data: string, index: number) => void
   deleteThisTask: (index: number) => void
   deleteAllTasks: () => void
 }
@@ -75,8 +64,8 @@ export function TasksContextProvider({ children }: TasksContextProviderProps) {
     dispatch(createNewTaskAction(newTask))
   }
 
-  function setStatusTask(index: number, newStatus: string) {
-    dispatch(setStatusTaskAction(index, newStatus))
+  function setStatusTask(data: string, index: number) {
+    dispatch(setStatusTaskAction(data, index))
   }
 
   function deleteThisTask(id: number) {
@@ -86,11 +75,6 @@ export function TasksContextProvider({ children }: TasksContextProviderProps) {
   function deleteAllTasks() {
     dispatch(deleteAllTasksAction())
   }
-
-  // function createFavoritesTasks(index: number, data: CreateFavoriteList) {
-  //   const favoritesTask = data.task
-  //   dispatch(createFavoritesTasksAction())
-  // }
 
   return (
     <TasksContext.Provider

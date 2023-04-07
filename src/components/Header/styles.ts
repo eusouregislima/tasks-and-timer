@@ -17,7 +17,7 @@ export const HeaderContainer = styled.div`
   }
 
   img {
-    width: 150px;
+    width: 100px;
   }
 
   nav {

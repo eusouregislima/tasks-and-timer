@@ -87,6 +87,11 @@ export const Button = styled.button`
   &:active {
     opacity: 0.6;
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
 `
 export const ContainerTask = styled.div`
   width: 736px;
@@ -102,19 +107,80 @@ export const ContainerTask = styled.div`
   display: flex;
   align-items: center;
 
+  .options-status {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+  }
+
+  .custom-select {
+    position: relative;
+    width: 3rem;
+    height: 2rem;
+    background: none;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .custom-select select {
+    background-color: transparent;
+    border: none;
+    width: 30%;
+    height: 100%;
+    padding-left: 30px;
+    cursor: pointer;
+    color: red;
+
+    &:hover {
+      color: ${(props) => props.theme['purple-300']};
+    }
+
+    &:active {
+      color: ${(props) => props.theme['purple-500']};
+    }
+  }
+
+  .custom-select::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    right: 10px;
+  }
+
   .inputButton {
-    width: 9rem;
+    width: 5rem;
     padding: 1.5rem;
     margin-right: 0.7rem;
     display: flex;
     justify-content: center;
     padding-bottom: 3rem;
+
+    button {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 999px;
+      border: none;
+      /* padding: 1rem; */
+      cursor: pointer;
+      background: none;
+
+      &:hover {
+        color: ${(props) => props.color};
+        opacity: 0.8;
+      }
+
+      &.active {
+        color: ${(props) => props.theme['purple-300']};
+      }
+    }
   }
 
   .label {
-    max-width: 38rem;
+    max-width: 43rem;
     word-wrap: break-word;
-    width: 38rem;
+    width: 43rem;
   }
 
   .svg {

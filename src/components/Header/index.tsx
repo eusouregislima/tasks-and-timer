@@ -10,22 +10,25 @@ export function Header() {
   return (
     <HeaderContainer>
       <div>
-        <img src={Logo} alt="" />
+        <NavLink to="/">
+          <img src={Logo} alt="" />
+        </NavLink>
+
         <nav>
           <Popup
             content="Liste suas tarefas a fazer"
             header="Tarefas"
             trigger={
-              <NavLink to="/to-do" title="Timer">
+              <NavLink to="/" title="Timer">
                 <CalendarCheck size={24} />
               </NavLink>
             }
           />
           <Popup
-            content="Liste sua atividade, começe quando estiver preparado"
-            header="Timer"
+            content="Marque o tempo para executar a sua atividade"
+            header="Pomodoro"
             trigger={
-              <NavLink to="/" title="Timer">
+              <NavLink to="/to-do-list" title="Timer">
                 <Timer size={24} />
               </NavLink>
             }

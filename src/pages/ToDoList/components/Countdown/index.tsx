@@ -16,10 +16,9 @@ export function Countdown() {
 
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
 
-  const minutesAmount = Math.floor(currentSeconds / 60) // quantos segundos inteiros e tenho
-  const secondsAmount = currentSeconds % 60 // se dividir todos os segundos por 60, quantos segundos sobram
+  const minutesAmount = Math.floor(currentSeconds / 60)
+  const secondsAmount = currentSeconds % 60
 
-  // Aqui transformei os números para strings paraquando for menor que 10 colocar um zero antes.
   const minutes = String(minutesAmount).padStart(2, '0')
   const seconds = String(secondsAmount).padStart(2, '0')
 
@@ -30,7 +29,6 @@ export function Countdown() {
     }
   }, [minutes, seconds, activeCycle])
 
-  // resolvendo o bug de quando inicio um novo intervalo com outro em andamento com a função return
   useEffect(() => {
     let interval: number
 

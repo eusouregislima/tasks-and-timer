@@ -114,7 +114,6 @@ export function CyclesContextProvider({
   }
 
   function deleteAllHistory() {
-    console.log('deleteAll')
     dispatch(deleteAllHistoryAction())
   }
 

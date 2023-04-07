@@ -3,12 +3,15 @@ import { useFormContext } from 'react-hook-form'
 
 import { useContext } from 'react'
 import { CyclesContext } from '../../../../context/CyclesContext'
+import { TasksContext } from '../../../../context/TaskContext'
 
 export function NewCycleForm() {
   const { activeCycle } = useContext(CyclesContext)
+
   const { register } = useFormContext()
-  // Esse useformContext só funcioa se houver um provider por volta do componente que está usando.
-  // No caso o NewCycleForm que está na home
+  const { tasks } = useContext(TasksContext)
+
+  console.log(tasks)
 
   return (
     <FormContainer>
@@ -17,16 +20,14 @@ export function NewCycleForm() {
         id="task"
         list="task-suggestions"
         placeholder="O que vamos fazer hoje?"
-        // os dois !! é uma forma de criar um boolean, significa estar true
         disabled={!!activeCycle}
         {...register('task')}
       />
 
       <datalist id="task-suggestions">
-        <option value="Estudar Inglês" />
-        <option value="Estudar Javascript" />
-        <option value="Projeto Portfólio" />
-        <option value="Intervalo" />
+        {tasks.map((task) => {
+          return <option key={task.task} value={task.task} />
+        })}
       </datalist>
 
       <label htmlFor="minutesAmount">Tempo</label>

@@ -16,10 +16,6 @@ export interface FavoritesTasks {
   task: string
 }
 
-interface FavoritesTasksState {
-  favoritesTasks: FavoritesTasks[]
-}
-
 export function tasksReducer(state: TasksState, action: any) {
   switch (action.type) {
     case ActionTypes.CREATE_NEW_TASK:
@@ -35,7 +31,7 @@ export function tasksReducer(state: TasksState, action: any) {
       }
 
       return produce(state, (draft) => {
-        draft.tasks[thisTaskIndex].status = action.payload.newStatus
+        draft.tasks[thisTaskIndex].status = action.payload.data
       })
     }
 
@@ -59,21 +55,5 @@ export function tasksReducer(state: TasksState, action: any) {
 
     default:
       return state
-  }
-}
-
-export function favoriteTaskReducer(state: FavoritesTasksState, action: any) {
-  switch (action.type) {
-    case ActionTypes.CREATE_FAVORITES_TASKS: {
-      // const favoriteTaskIndex = action.payload.index
-
-      // if (favoriteTaskIndex < 0) {
-      //   return state
-      // }
-
-      return produce(state, (draft) => {
-        draft.favoritesTasks.push(action.payload.favoritesTask)
-      })
-    }
   }
 }

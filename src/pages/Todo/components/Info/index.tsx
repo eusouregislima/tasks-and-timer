@@ -4,10 +4,9 @@ import { useContext } from 'react'
 
 export function Info() {
   const { tasks } = useContext(TasksContext)
-  console.log(tasks)
 
   const totalCompleted = tasks.reduce((total, task) => {
-    if (task.status === 'Concluída') {
+    if (task.status === 'Concluida') {
       return total + 1
     } else {
       return total

@@ -17,12 +17,12 @@ export function createNewTaskAction(newTask: Task) {
   }
 }
 
-export function setStatusTaskAction(index: number, newStatus: string) {
+export function setStatusTaskAction(data: string, index: number) {
   return {
     type: ActionTypes.SET_STATUS_TASK,
     payload: {
+      data,
       index,
-      newStatus,
     },
   }
 }
@@ -41,12 +41,3 @@ export function deleteAllTasksAction() {
     type: ActionTypes.DELETE_ALL_TASKS,
   }
 }
-
-// export function createFavoritesTasksAction(favoritesTask: FavoritesTasks) {
-//   return {
-//     type: ActionTypes.CREATE_FAVORITES_TASKS,
-//     payload: {
-//       favoritesTask,
-//     },
-//   }
-// }
