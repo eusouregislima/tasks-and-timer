@@ -8,7 +8,7 @@
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
 </p>
 
-> Project Status: :warning: In development. Building responsiveness.
+> Project Status: :heavy_check_mark: Concluded.
 
 ### Topics 
 
@@ -24,7 +24,7 @@
 
 :small_blue_diamond: [Usability](#usability)
 
-:small_blue_diamond: [JSON](#JSON)
+:small_blue_diamond: [JSON](#Json)
 
 :small_blue_diamond: [Database](#database)
 
@@ -50,7 +50,7 @@
   
   The data is stored in the user's local storage, so we recommend that information be added and deleted daily. <br/>
   
-  The project still awaits responsiveness changes that I am considering finding a partner to take care of that part. <br/>
+  The project is responsive. <br/>
   
   Try it out and leave feedback on my LinkedIn. The link is in the application footer. Thank you.<br/>
 </p>
@@ -76,6 +76,7 @@
 ![Home](https://user-images.githubusercontent.com/108771153/230655781-42f3b3e4-efc2-400f-a569-416a9b912aac.png)
 ![tela 1](https://user-images.githubusercontent.com/108771153/230656053-4bd3d486-404e-496c-975d-5c3612f2a44a.png)
 ![tela 2](https://user-images.githubusercontent.com/108771153/230656180-6162f48d-0b7a-47a5-9d3e-ee51a593974c.png)
+![prints](https://user-images.githubusercontent.com/108771153/230678388-e32abeff-0f6a-4719-9cfa-ddcf0f4a7713.png)
 
 ## Libraries
 
@@ -153,7 +154,7 @@ We recommend registering the tasks for the next day every night, and at the end 
 As the data is saved in your Local Storage, you can even turn off the computer, and the tasks will not be lost unless the user clears the Local Storage.
 
 
-## JSON
+## Json
 
 ### Tasks:  :floppy_disk:
 
@@ -190,16 +191,14 @@ I used React-Semantic-Ui to explain the flow within the application to the user.
 
 Date-fns was very helpful in manipulating dates. 
 
-Switch made my code cleaner along with Default Layout and Default 
+Switch made my code cleaner along with Default Layout and Default Theme. 
 
-Theme. 
-
-Responsive design is still a problem to be solved soon.
+The responsive part was easier than I thought.
 
 
 ## Open tasks
 
-:memo: Responsiveness 
+A web project is never completed, it is abandoned!
 
 ## Developers e contributors
 
