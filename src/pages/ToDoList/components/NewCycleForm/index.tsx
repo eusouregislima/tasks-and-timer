@@ -11,8 +11,6 @@ export function NewCycleForm() {
   const { register } = useFormContext()
   const { tasks } = useContext(TasksContext)
 
-  console.log(tasks)
-
   return (
     <FormContainer>
       <label htmlFor="task">Atividade:</label>
@@ -30,19 +28,21 @@ export function NewCycleForm() {
         })}
       </datalist>
 
-      <label htmlFor="minutesAmount">Tempo</label>
-      <MinutesAmountInput
-        type="number"
-        id="minutesAmount"
-        placeholder="00"
-        step={5}
-        min={5}
-        max={60}
-        disabled={!!activeCycle}
-        {...register('minutesAmount', { valueAsNumber: true })}
-      />
+      <div className="inputs">
+        <label htmlFor="minutesAmount">Tempo</label>
+        <MinutesAmountInput
+          type="number"
+          id="minutesAmount"
+          placeholder="00"
+          step={5}
+          min={5}
+          max={60}
+          disabled={!!activeCycle}
+          {...register('minutesAmount', { valueAsNumber: true })}
+        />
 
-      <span>minutos.</span>
+        <span>minutos.</span>
+      </div>
     </FormContainer>
   )
 }

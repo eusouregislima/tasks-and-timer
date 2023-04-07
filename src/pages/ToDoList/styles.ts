@@ -13,7 +13,14 @@ export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8rem;
+    gap: 6rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 1.5rem;
+    form {
+      gap: 4rem;
+    }
   }
 `
 
@@ -23,6 +30,10 @@ export const BaseCountdownButton = styled.button`
   border: 0;
   padding: 1rem;
   border-radius: 8px;
+
+  @media screen and (max-width: 550px) {
+    width: 50%;
+  }
 
   display: flex;
   align-items: center;

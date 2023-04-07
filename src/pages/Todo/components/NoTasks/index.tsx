@@ -11,9 +11,9 @@ export function NoTasksHere() {
       <br />
       <br />
       <p style={{ color: 'white' }}>
-        Utilize <b>Pomodoro Timer</b> no menu {<Timer size={18} />} para
-        controlar o tempo de execução da tarefa e do descanso
+        Utilize <b>Pomodoro Timer</b> no menu {<Timer size={18} />}{' '}
       </p>
+      <p>para controlar o tempo de execução da tarefa e do descanso</p>
     </NoTasks>
   )
 }

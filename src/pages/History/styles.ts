@@ -14,6 +14,16 @@ export const HistoryContainer = styled.main`
     padding: 1rem;
     width: 100%;
   }
+  @media screen and (max-width: 1000px) {
+    .history {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      width: 60%;
+      gap: 1rem;
+    }
+  }
 
   h1 {
     font-size: 1.5rem;
@@ -36,6 +46,13 @@ export const HistoryContainer = styled.main`
     justify-content: space-between;
     max-width: 70rem;
   }
+  @media screen and (max-width: 620px) {
+    div {
+      justify-content: center;
+      width: 30rem;
+      padding: 0 3rem;
+    }
+  }
 `
 
 export const HistoryList = styled.div`
@@ -43,6 +60,10 @@ export const HistoryList = styled.div`
   margin-top: 3rem;
   width: 75rem;
   margin-bottom: 2rem;
+
+  @media screen and (max-width: 1000px) {
+    width: 43rem;
+  }
 
   table {
     width: 100%;
@@ -87,6 +108,18 @@ export const HistoryList = styled.div`
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
       }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    table {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    table {
+      min-width: 380px;
     }
   }
 `

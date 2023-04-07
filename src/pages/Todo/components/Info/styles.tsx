@@ -5,6 +5,12 @@ export const ContainerInfo = styled.div`
   display: flex;
   justify-content: space-between;
 
+  @media screen and (max-width: 760px) {
+    width: 38rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
   span {
     display: flex;
     align-items: center;
