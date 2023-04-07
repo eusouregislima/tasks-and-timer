@@ -7,7 +7,7 @@ export function Footer() {
     <FooterContainer>
       <div>
         <a
-          href="https://github.com/eusouregislima"
+          href="https://github.com/eusouregislima/tasks-and-timer"
           target="_blank"
           rel="noreferrer"
         >
