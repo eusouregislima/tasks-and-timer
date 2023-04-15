@@ -5,7 +5,7 @@
 <img src="https://img.shields.io/static/v1?label=Vercel&message=deploy&color=ff69b4&style=for-the-badge&logo=vercel"/>
 <img src="https://img.shields.io/static/v1?label=Typescriptl&message=language&color=blue&style=for-the-badge&logo=typescript"/>
 <img src="https://img.shields.io/static/v1?label=Vite&message=build&color=blue&style=for-the-badge&logo=vite"/>
-<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=RED&style=for-the-badge"/>
 </p>
 
 > Project Status: :heavy_check_mark: Concluded.
